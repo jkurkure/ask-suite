@@ -1,2 +1,2 @@
-# today-in-history
-Python commandlet to pretty-print historical events that happened today.
+# ask-suite
+Useful command-line tools to quickly look up information

@@ -51,7 +51,10 @@ events = []
 
 # Iterate over the event elements and extract the event and year
 for event in event_elements:
-    year = event.find("a", class_="date").text.strip()
+    try:
+        year = event.find("a", class_="date").text.strip()
+    except AttributeError:
+        year = event.find("b").text.strip()
     incident = " ".join(event.text.strip().split()[1:])
     
     # Check if the year is present in the incident string
